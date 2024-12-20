@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulari de contacte">
+    <meta name="keywords" content="Contacte, Contacta amb nosaltres, Formulari, Tarragona, Cultura, Esdeveniments, Notícies, Informació, Agenda cultural">
+    <title>Contacte</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imatges/favicon_tgn_transparente.ico" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <a id="top"></a>
+        <h1>TARRAGONA CULTURA</h1>
+        <p>La cultura ens transforma</p>
+    </header>
+
+    <!-- Navegació -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Inici</a></li>
+            <li><a href="Esdeveniments.html">Esdeveniments</a></li>
+            <li><a href="Noticies.html">Notícies</a></li>
+            <li><a href="Contacte.html">Contacte</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contingut principal -->
+
+    <form action="contacte.php" method="post">
+        <div class="form">
+            <fieldset>
+                <legend>Dades Personals</legend>
+                <label for="nombre">Nom:</label>
+                <input type="text" id="nombre" name="nombre" value="" required><br>
+                <label for="correo">Correu Electrònic:</label>
+                <input type="email" id="correo" name="correo" required><br>
+                <label for="edad">Edat:</label>
+                <input type="number" id="edad" name="edad" min="16" max="99" required><br><br>
+            </fieldset>
+        </div>
+
+        <div class="form">
+            <label for="motiu">Amb què està relacionada la teva consulta?</label>
+            <select id="motiu" name="motiu">
+                <optgroup label="Esdeveniments">
+                    <option value="proximos-esdeveniments" selected="selected">Proxims esdeveniments</option>
+                    <option value="programa-anual">Programa anual</option>
+                </optgroup>
+                <optgroup label="Notícies">
+                    <option value="vull-saber-mes">Vull saber més</option>
+                    <option value="vull-donar-informacio">Vull donar informació</option>
+                </optgroup>
+                <optgroup label="Altres">
+                    <option value="donar-feedback">Donar feedback</option>
+                    <option value="consultes-generals">Consultes generals</option>
+                    <option value="altres-consultes">Altres consultes o preguntes</option>
+                </optgroup>
+            </select>
+            <br>
+            <label for="consulta">Escriu la teva consulta: </label>
+            <textarea id="consulta" name="consulta" cols="40" rows="5" required></textarea>
+        </div>
+
+
+        <div class="form">
+            <label for="conocer">Com ens has conegut? (selecció múltiple)</label>
+            <select id="conocer" name="conocer" size="4" multiple="multiple">
+                <option value="Publicidad" selected="selected">Publicitat</option>
+                <option value="Conocidos">Coneguts</option>
+                <option value="Internet">Internet</option>
+                <option value="Docentes">Periòdics</option>
+            </select>
+
+            <label for="satisfacción">Ens importa la teva opinió! Com puntuaries els nostres serveis?</label>
+            <select id="satisfacción" name="satisfacción">
+                <option value="" selected="selected">- selecciona -</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        </div>
+        
+        <div class="form">
+            <label for="terminos">
+                <input type="checkbox" name="terminos" id="terminos" required>
+                Accepto els termes i condicions de la <a href="Politica_privacitat.html" target="_blank">Política de Privacitat</a> i la <a href="Politica_cookies.html" target="_blank">Política de Cookies</a>.
+            </label>
+
+            <input type="submit" name="enviar" value="Enviar" id="enviar">
+            <input type="reset" name="limpiar" value="Borrar datos del formulario" id="limpiar">
+        </div>
+    </form>
+    <a href="#top" class="back-to-top"> ↑ </a>
+
+    <!-- Peu de página -->
+    <footer>
+        <p>© 2024 Cultura TGN. Tots els drets reservats.</p>
+        <p>
+            <a class="bookmark" href="Politica_cookies.html">Política de Cookies</a> | 
+            <a class="bookmark" href="Politica_privacitat.html">Política de Privacitat</a>
+        </p>
+    </footer>
+
+</body>
+
+</html>
